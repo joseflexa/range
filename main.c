@@ -47,7 +47,9 @@ int main(int argc, char *argv[])
             printf("%s", line);
         }
     }
-
+    if (ranges) {
+        free(ranges);
+    }
     fclose(fp);
     if (line) {
         free(line);
